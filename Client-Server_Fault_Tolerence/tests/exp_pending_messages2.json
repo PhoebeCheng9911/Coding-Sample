@@ -1,0 +1,20 @@
+[
+  {
+    "sender": "user1",
+    "receiver": "user2",
+    "timestamp": 12345,
+    "message": "Hello!"
+  },
+  {
+    "sender": "user1",
+    "receiver": "user2",
+    "timestamp": 12347,
+    "message": "Hey!"
+  },
+  {
+    "sender": "user1",
+    "receiver": "user2",
+    "timestamp": null,
+    "message": "Howdy!"
+  }
+]

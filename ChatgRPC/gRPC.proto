@@ -1,0 +1,61 @@
+syntax = "proto2";
+// python3 -m grpc_tools.protoc -I. --python_out=. --pyi_out=. --grpc_python_out=. gRPC.proto
+service ChatServer {
+   rpc Login(AuthenticationToken) returns (ReturnStatusPayload) {}
+   rpc CreateAct(AuthenticationToken) returns (SuccessStatus) {}
+   rpc DeleteAct(Username) returns (SuccessStatus) {}
+   rpc Status(Username) returns (PendingMessagesPayload) {}
+   rpc ListUsernames(ListUsernamesParams) returns (Usernames) {}
+   rpc SendMsg(SendParams) returns (ReturnStatusPayload) {}
+   rpc ListPendingMsgs(Username) returns (PendingMessagesPayload) {}
+   rpc Logout(Username) returns (SuccessStatus) {}
+   // This bi-directional stream makes it possible to send and receive Notes between 2 persons
+   rpc ChatStream (Empty) returns (stream ChatMessage);
+   rpc SendNote (ChatMessage) returns (Empty);
+}
+
+message Empty {}
+
+message SuccessStatus {
+    required bool success = 1;
+}
+
+message AuthenticationToken {
+  required string username = 1;
+  required string password = 2;
+}
+
+message Username {
+    required string username = 1;
+}
+
+message Usernames {
+    repeated Username usernames = 1;
+}
+
+message ListUsernamesParams {
+    required string wildcard = 1;
+}
+
+message SendParams {
+    required string receiver_username = 1;
+    required string sender_username = 2;
+    required string msg = 3;
+}
+
+message ChatMessage {
+    required string receiver_username = 1;
+    required string sender_username = 2;
+    required string message = 3; 
+}
+
+message PendingMessagesPayload {
+    repeated ChatMessage msg = 1;
+}
+
+message ReturnStatusPayload {
+    required bool success = 1;
+    optional string serverMsg = 2;
+    optional PendingMessagesPayload successPayload = 3;
+}
+

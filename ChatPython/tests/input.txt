@@ -1,0 +1,9 @@
+create katrina brown
+status
+logout
+status
+create janet li
+status
+send katrina hi! How's it going? :)
+logout
+login katrina brown

@@ -1,0 +1,39 @@
+Not enough arguments. Please enter a username and a password.
+Created new account successfully!
+Please log out before creating a new account.
+Logged out successfully
+Username is not unique, please try again.
+Not logged in
+Not logged in
+Not logged in
+Not logged in
+Not enough arguments. Please enter a username and a password.
+Failed to login, please check username and/or password and try again.
+Welcome back!
+You have 0 recent message(s).
+
+user1
+Already logged in as user1
+Delete account successfully, logging out
+Not logged in
+Created new account successfully!
+Logged out successfully
+Created new account successfully!
+Not enough info. Please enter a recipient username and message.
+The recipient user does not exist.
+Message is too long. Maximum message length is 280 characters.
+Sent message to user1 successfully, they will see it when they log back on!
+[('user2', 'Hello! Once upon a time...')]
+Logged out successfully
+Welcome back!
+You have 1 recent message(s).
+[user2] Hello! Once upon a time...
+Sent message to user2 successfully, they will see it when they log back on!
+[('user1', 'Hello! Once upon a time...')]
+Delete account successfully, logging out
+Not logged in
+Welcome back!
+You have 0 recent message(s).
+
+[username: "user2"
+]
