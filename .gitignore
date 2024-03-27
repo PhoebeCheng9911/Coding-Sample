@@ -34,3 +34,5 @@ src_cplusplsu/
 *.exe
 *.out
 *.app
+
+.DS_Store
