@@ -4,6 +4,7 @@
 ### Usage
 Use one terminal for the server, and one additional terminal for each connected client.
 To start the server
+
 ```
 python3 server.py
 ```
@@ -28,6 +29,6 @@ list_pending
 ```
 
 ### gRPC vs non-gRPC
-We implemented ChatServer with different empathsis. To run the simple ChatServer, ``cd ChatgRPC`` before starting up the server and client. 
+We implemented a simple ChatServer with basic sockets and two enhanced versions (gRPC and fault tolerance). To run the simple ChatServer, ``cd SimpleChat `` before starting up the server and client. 
 To run the ChatServer using gRPC, ``cd ChatgRPC`` before starting up the server and client.
-To run the ChatServer with Fault Tolerance, ``cd ChatPython`` before starting up the server and client.
+To run the ChatServer with Fault Tolerance, ``cd Chat_FaultTolerance`` before starting up the server and client.
